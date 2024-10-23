@@ -6,9 +6,9 @@
       "integrity": "sha256:503f23cd692325b3cbb8c20a0ecfabb3444b0c786b363e0c82572bd7d71dc099"
     },
     "ghcr.io/devcontainers/features/python:1": {
-      "version": "1.6.4",
-      "resolved": "ghcr.io/devcontainers/features/python@sha256:046a904b940e1793327369f57f4b0a7d89febbdd9e77086a70feffdfa564f888",
-      "integrity": "sha256:046a904b940e1793327369f57f4b0a7d89febbdd9e77086a70feffdfa564f888"
+      "version": "1.6.5",
+      "resolved": "ghcr.io/devcontainers/features/python@sha256:f5e1557b5745bcc3aa8f12eaa1084b8d63952d73e776c406214d65f593aae6d8",
+      "integrity": "sha256:f5e1557b5745bcc3aa8f12eaa1084b8d63952d73e776c406214d65f593aae6d8"
     },
     "ghcr.io/ministryofjustice/devcontainer-feature/container-structure-test:1": {
       "version": "1.0.0",
