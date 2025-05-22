@@ -6,15 +6,17 @@
       "integrity": "sha256:5f3e2005aad161ce3ff7700b2603f11935348c039f9166960efd050d69cd3014"
     },
     "ghcr.io/devcontainers/features/python:1": {
-      "version": "1.7.0",
-      "resolved": "ghcr.io/devcontainers/features/python@sha256:8452f39db0852420728c9f7503dd94b3fc71aa558b5e7c8f6f9ce6687e494ae3",
-      "integrity": "sha256:8452f39db0852420728c9f7503dd94b3fc71aa558b5e7c8f6f9ce6687e494ae3"
+      "version": "1.7.1",
+      "resolved": "ghcr.io/devcontainers/features/python@sha256:cf9b6d879790a594b459845b207c5e1762a0c8f954bb8033ff396e497f9c301b",
+      "integrity": "sha256:cf9b6d879790a594b459845b207c5e1762a0c8f954bb8033ff396e497f9c301b"
     },
     "ghcr.io/ministryofjustice/devcontainer-feature/container-structure-test:1": {
       "version": "1.0.0",
       "resolved": "ghcr.io/ministryofjustice/devcontainer-feature/container-structure-test@sha256:19eb30f9eb327b667be2002757d55381de87cdb5a79a6e37d293369fe8ad01ad",
       "integrity": "sha256:19eb30f9eb327b667be2002757d55381de87cdb5a79a6e37d293369fe8ad01ad",
-      "dependsOn": ["ghcr.io/devcontainers/features/docker-in-docker:2"]
+      "dependsOn": [
+        "ghcr.io/devcontainers/features/docker-in-docker:2"
+      ]
     }
   }
 }
