@@ -1,0 +1,5 @@
+misconfigurations:
+  - id: AVD-DS-0002 # USER not required - AWS Lambda uses non-root user
+  - id: AVD-DS-0026 # HEALTHCHECK not required - AWS Lambda does not support HEALTHCHECK
+    paths:
+      - "./Dockerfile"
