@@ -1,5 +1,7 @@
 #checkov:skip=CKV_DOCKER_2: HEALTHCHECK not required - AWS Lambda does not support HEALTHCHECK
 #checkov:skip=CKV_DOCKER_3: USER not required - A non-root user is used by AWS Lambda
+#trivy:ignore:AVD-DS-0002
+#trivy:ignore:AVD-DS-0026
 
 FROM public.ecr.aws/lambda/python:3.13@sha256:e701ffe579fbf6e29c6b6d6f62946055e0da40a14ef0323f68c3b6ae4eb81cfa
 
