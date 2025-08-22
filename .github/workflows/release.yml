@@ -45,7 +45,7 @@ jobs:
         uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83 # v6.18.0
         with:
           push: true
-          tags: 374269020027.dkr.ecr.eu-west-2.amazonaws.com/observability-platform-grafana-api-key-rotator:${REF_NAME}"
+          tags: "374269020027.dkr.ecr.eu-west-2.amazonaws.com/observability-platform-grafana-api-key-rotator:${REF_NAME}"
         env:
           REF_NAME: ${{ github.ref_name }}
 
