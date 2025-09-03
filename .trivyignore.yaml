@@ -1,9 +1,0 @@
-misconfigurations:
-  - id: AVD-DS-0002
-    comment: USER not required - AWS Lambda uses non-root user
-    paths:
-      - Dockerfile
-  - id: AVD-DS-0026
-    comment: HEALTHCHECK not required - AWS Lambda does not support HEALTHCHECK
-    paths:
-      - Dockerfile
