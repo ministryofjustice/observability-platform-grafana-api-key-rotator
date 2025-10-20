@@ -12,7 +12,6 @@ workspace_api_key_ttl = (
 workspace_id = os.environ["WORKSPACE_ID"]
 secret_id = os.environ["SECRET_ID"]
 
-
 def lambda_handler(event, context):  # pylint: disable=unused-argument
     try:
         grafana_client.delete_workspace_api_key(
