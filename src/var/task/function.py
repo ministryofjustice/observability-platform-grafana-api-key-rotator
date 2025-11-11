@@ -6,8 +6,8 @@ import botocore.exceptions
 grafana_client = boto3.client("grafana")
 secretsmanager_client = boto3.client("secretsmanager")
 workspace_api_key_name = os.environ["WORKSPACE_API_KEY_NAME"]
-workspace_api_key_ttl = (
-    os.environ.get("WORKSPACE_API_KEY_TTL") or 1209600
+workspace_api_key_ttl = int(
+    os.environ.get("WORKSPACE_API_KEY_TTL", "1209600")
 )  # 1209600 is 14 days
 workspace_id = os.environ["WORKSPACE_ID"]
 secret_id = os.environ["SECRET_ID"]
