@@ -37,3 +37,4 @@ jobs:
           PYTHON_PYLINT_CONFIG_FILE: pyproject.toml
           VALIDATE_BIOME_FORMAT: false
           VALIDATE_BIOME_LINT: false
+          FIX_PYTHON_RUFF_FORMAT: true
