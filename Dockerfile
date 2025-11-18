@@ -1,7 +1,7 @@
 #checkov:skip=CKV_DOCKER_2: HEALTHCHECK not required - AWS Lambda does not support HEALTHCHECK
 #checkov:skip=CKV_DOCKER_3: USER not required - A non-root user is used by AWS Lambda
 
-FROM public.ecr.aws/lambda/python:3.13.2025.11.13.22@sha256:0d3287627c651d06c3596a830cd332d75d8b0b981fc0b0a3e262e4fd7e5d06c1
+FROM public.ecr.aws/lambda/python:3.13.2025.11.18.09@sha256:899566894a5f7c21aef834cc74f1f743f989c4beb976800d35b75b9d95fcd48b
 
 LABEL org.opencontainers.image.vendor="Ministry of Justice" \
       org.opencontainers.image.authors="Observability Platform (observability-platform@digital.justice.gov.uk)" \
