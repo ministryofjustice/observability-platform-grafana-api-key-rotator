@@ -7,3 +7,11 @@
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ministryofjustice/observability-platform-grafana-api-key-rotator)
 
 This image is used in [Observability Platform](https://github.com/ministryofjustice/observability-platform) to rotate the automation API key used by [Terraform](https://github.com/ministryofjustice/modernisation-platform-environments/tree/main/terraform/environments/observability-platform).
+
+## Security scanning
+
+The Docker image removes `/usr/local/bin/aws-lambda-rie` during build.
+
+- `aws-lambda-rie` is a local emulation binary included in the AWS Lambda base image.
+- It is not required for runtime execution in AWS Lambda.
+- Removing it avoids failing container vulnerability scans on base-image emulator CVEs while keeping the production Lambda runtime behavior unchanged.
