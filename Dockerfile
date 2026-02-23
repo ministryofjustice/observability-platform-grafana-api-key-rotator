@@ -14,6 +14,7 @@ SHELL ["/bin/bash", "-e", "-u", "-o", "pipefail", "-c"]
 COPY --chown=nobody:nobody --chmod=0755 src/var/task/ ${LAMBDA_TASK_ROOT}
 
 RUN <<EOF
+rm -f /usr/local/bin/aws-lambda-rie
 python -m pip install --no-cache-dir --requirement requirements-pip.txt
 python -m pip install --no-cache-dir --requirement requirements.txt
 EOF
