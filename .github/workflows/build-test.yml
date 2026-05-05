@@ -23,7 +23,7 @@ jobs:
 
       - name: Set Up Container Structure Test
         id: setup_container_structure_test
-        uses: ministryofjustice/modernisation-platform-github-actions/setup-container-structure-test@544c7bb214758a098b054014fa16ab86bad305b5 # v6.0.0
+        uses: ministryofjustice/modernisation-platform-github-actions/setup-container-structure-test@d2d07632db53d17c9760c0c2c06f22a37bd3f0a1 # v6.0.1
 
       - name: Build and Test
         id: build_and_test
