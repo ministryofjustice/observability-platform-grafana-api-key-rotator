@@ -5,10 +5,12 @@ import botocore.exceptions
 
 grafana_client = boto3.client("grafana")
 secretsmanager_client = boto3.client("secretsmanager")
-workspace_service_account_name = os.environ["WORKSPACE_SERVICE_ACCOUNT_NAME"]  # renamed from WORKSPACE_API_KEY_NAME
+workspace_service_account_name = os.environ[
+    "WORKSPACE_SERVICE_ACCOUNT_NAME"
+]
 workspace_api_key_ttl = (
     os.environ.get("WORKSPACE_API_KEY_TTL") or 1209600
-)  # 1209600 is 14 days — note: AWS hard cap is 30 days (2592000)
+)  # 1209600 is 14 days
 workspace_id = os.environ["WORKSPACE_ID"]
 secret_id = os.environ["SECRET_ID"]
 
@@ -17,11 +19,17 @@ def lambda_handler(event, context):  # pylint: disable=unused-argument
     # Find the service account ID by name
     accounts = grafana_client.list_workspace_service_accounts(workspaceId=workspace_id)
     service_account = next(
-        (a for a in accounts["serviceAccounts"] if a["name"] == workspace_service_account_name),
-        None
+        (
+            a
+            for a in accounts["serviceAccounts"]
+            if a["name"] == workspace_service_account_name
+        ),
+        None,
     )
     if service_account is None:
-        raise ValueError(f"Service account '{workspace_service_account_name}' not found in workspace {workspace_id}")
+        raise ValueError(
+            f"Service account '{workspace_service_account_name}' not found in workspace {workspace_id}"
+        )
 
     service_account_id = service_account["id"]
 
