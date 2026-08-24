@@ -11,6 +11,10 @@ updates:
     commit-message:
       prefix: ":dependabot: github-actions"
       include: "scope"
+    groups:
+      codeql:
+        patterns:
+          - "github/codeql-action/*"
   - package-ecosystem: "devcontainers"
     directory: "/"
     schedule:
